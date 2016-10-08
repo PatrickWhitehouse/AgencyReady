@@ -75,15 +75,6 @@ a:hover {
 .cf:after {
   clear: both; }
 
-/* Make footer stay at bottom */
-.bottom_footer {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column; }
-
-main {
-  flex: 1; }
-
 /* Navigation Styling */
 nav.main {
   width: 100%;
@@ -236,6 +227,15 @@ footer {
   padding: 0; }
 
 /* Responsive */
+@media (min-width: 768px) {
+  /* Make footer stay at bottom */
+  .bottom_footer {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column; }
+
+  main {
+    flex: 1; } }
 @media (max-width: 768px) {
   .col-half,
   .col-third,
@@ -262,11 +262,19 @@ footer {
   nav.main, nav.sub_pages {
     justify-content: center; }
 
-  nav.main ul, nav.sub_pages ul {
+  nav.main ul {
     padding: 0;
     margin: 0; }
 
-  nav.main li, nav.sub_pages li {
+  nav.sub_pages ul {
+    padding: 0;
+    margin: 0; }
+
+  nav.main li {
+    margin: 0;
+    padding: 10px; }
+
+  nav.sub_pages li {
     margin: 0;
     padding: 10px; }
 
