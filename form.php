@@ -1,14 +1,28 @@
+<?php
+
+  $name = trim($_POST['name']);
+  $email = trim($_POST['email']);
+  $msg = $_POST['message'];
+  $to = "patrick1996@gmail.com";
+  $subject = "New Form";
+
+  mail($to, $subject, $msg, "From: " . $name);
+
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Contact Patrick Whitehouse">
+    <meta name="description" content="Form Submitted Patrick Whitehouse">
     <meta name="keywords" content="Patrick, Whitehouse, Portfolio, MMU, Personal, Work, Web, Development">
     <meta name="author" content="Patrick Whitehouse">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact - Patrick Whitehouse</title>
+    <title>Form Submitted - Patrick Whitehouse</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -36,35 +50,15 @@
 
             <div class="row">
                 <div class="col-full">
-                    <h2>Contact Patrick</h2>
+                    <h2>Form Submitted!</h2>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-full">
-                    <p>There are plenty of ways in which you can get in contact with me. Either use the contact form below, contact me via social media (preferably Twitter) or email me. </p>
+                    <p>Your form has been submitted. I'll try my best to reply within 24 hours. This page will redirect back to the homepage! </p>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-half">
-                    <form action="form.php" method="post" enctype="multipart/form-data" id="contact_form">
-
-                      <label for="name">Your name</label>
-                      <input type="text" id="name" name="name"><br>
-
-                      <label for="email">Your email</label>
-                      <input type="email" id="email" name="email"><br>
-
-                      <label for="message">Your message</label>
-                      <textarea name="message" id="message" cols="30" rows="10"></textarea><br>
-
-                      <input type="submit" name="submit" value="Submit">
-
-                    </form>
-                </div>
-            </div>
-
     </main>
 
     <!-- End About Content -->
