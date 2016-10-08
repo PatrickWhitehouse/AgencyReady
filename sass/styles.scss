@@ -45,6 +45,7 @@ a:hover {
     opacity: 1;
 }
 
+
 .wrapper {
     max-width: 960px;
     margin: 0 auto;
@@ -94,6 +95,19 @@ a:hover {
 .cf:after {
     clear: both;
 }
+
+/* Make footer stay at bottom */
+
+.bottom_footer{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main{
+  flex:1;
+}
+
 /* Navigation Styling */
 nav.main {
     width: 100%;
@@ -129,6 +143,44 @@ nav.main a {
 nav.main a:hover {
     opacity: 1;
 }
+
+/* Sub Page Navigation */
+
+nav.sub_pages {
+    width: 100%;
+    height: 80px;
+    background-color: transparent;
+    border-bottom: 1px solid $grey;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+nav.sub_pages ul {
+    margin: 0 40px 0 0;
+}
+
+nav.sub_pages li {
+    list-style: none;
+    display: inline;
+    margin-left: 20px;
+}
+
+nav.sub_pages a {
+    color: $grey;
+    opacity: 1;
+    text-decoration: none;
+    font-size: 12px;
+    transition: 0.3s all ease;
+    text-transform: uppercase;
+}
+
+nav.sub_pages a:hover {
+    opacity: 0.7;
+}
+
 /* Hero Section Styling */
 
 section.hero {
@@ -164,8 +216,6 @@ img.portrait {
 
 ul.social_media{
   padding: 0;
-
-
   li{
     list-style: none;
   }
@@ -174,6 +224,7 @@ ul.social_media{
 /* Footer Styling */
 footer {
     height: 200px;
+    width: 100%;
     padding: 30px 0;
     background-color: $darkgrey;
     color: $lightgrey;
@@ -223,6 +274,7 @@ footer {
     }
     .footer_right,.footer_left{
       width: 100%;
+      padding: 0;
     }
     .footer_right{
       height: 50px;
@@ -234,16 +286,16 @@ footer {
 
 @media (max-width:560px) {
 
-    nav.main {
+    nav.main, nav.sub_pages {
         justify-content: center;
     }
 
-    nav.main ul {
+    nav.main ul, nav.sub_pages ul {
         padding: 0;
         margin: 0;
     }
 
-    nav.main li {
+    nav.main li, nav.sub_pages li {
         margin: 0;
         padding: 10px;
     }
