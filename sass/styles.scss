@@ -164,7 +164,7 @@ img.portrait {
 
 ul.social_media{
   padding: 0;
-  
+
 
   li{
     list-style: none;
@@ -178,10 +178,23 @@ footer {
     background-color: $darkgrey;
     color: $lightgrey;
     font-size: 0.8em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+}
+
+.footer_left, .footer_right{
+  padding: 0 10px;
+}
+.footer_left{
+  width: 50%;
+  display: inline-block;
+}
+
+.footer_right{
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  float: right;
+  height: 120px;
 }
 
 #twitter-widget {
@@ -207,6 +220,15 @@ footer {
     }
     .row {
         padding: 0 20px;
+    }
+    .footer_right,.footer_left{
+      width: 100%;
+    }
+    .footer_right{
+      height: 50px;
+      justify-content: center;
+      margin-top: 20px;
+      opacity: .2;
     }
 }
 
