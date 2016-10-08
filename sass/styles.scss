@@ -125,7 +125,7 @@ nav.main a {
     color: $lightgrey;
     opacity: 0.7;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 0.75em;
     transition: 0.3s all ease;
     text-transform: uppercase;
 }
@@ -162,7 +162,7 @@ nav.sub_pages a {
     color: $grey;
     opacity: 1;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 0.75em;
     transition: 0.3s all ease;
     text-transform: uppercase;
 }
@@ -188,7 +188,7 @@ section.hero {
 }
 
 h1.hero {
-    font-size: 40px;
+    font-size: 2.5em;
 }
 
 p.hero_description {

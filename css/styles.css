@@ -99,7 +99,7 @@ nav.main a {
   color: #F5F5F5;
   opacity: 0.7;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 0.75em;
   transition: 0.3s all ease;
   text-transform: uppercase; }
 
@@ -130,7 +130,7 @@ nav.sub_pages a {
   color: #666666;
   opacity: 1;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 0.75em;
   transition: 0.3s all ease;
   text-transform: uppercase; }
 
@@ -152,7 +152,7 @@ section.hero {
   align-items: center; }
 
 h1.hero {
-  font-size: 40px; }
+  font-size: 2.5em; }
 
 p.hero_description {
   max-width: 800px;
