@@ -5,8 +5,9 @@
   $msg = $_POST['message'];
   $to = "patrick1996@gmail.com";
   $subject = "New Form";
+  $headers = "From: $email";
 
-  mail($to, $subject, $msg, "From: " . $name);
+  mail($to, $subject, $msg, $headers);
 
 
 
@@ -17,6 +18,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Refresh" content="3; url=index.html">
     <meta name="description" content="Form Submitted Patrick Whitehouse">
     <meta name="keywords" content="Patrick, Whitehouse, Portfolio, MMU, Personal, Work, Web, Development">
     <meta name="author" content="Patrick Whitehouse">
