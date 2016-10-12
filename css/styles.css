@@ -115,7 +115,8 @@ nav.main a:hover {
 /* Sub Page Navigation */
 nav.sub_pages {
   width: 100%;
-  height: 80px;
+  min-height: 80px;
+  max-height: 80px;
   background-color: transparent;
   border-bottom: 1px solid #666666;
   display: flex;
@@ -177,8 +178,8 @@ ul.social_media {
     list-style: none; }
 
 /* Blog Post Styling */
-button.blog_read_more {
-  width: 120px;
+button.blog_read_more, button.go_back_blogs {
+  width: auto;
   padding: 10px;
   border: 1px solid #43a7c7;
   background-color: transparent;
@@ -189,9 +190,10 @@ button.blog_read_more {
   text-transform: uppercase;
   transition: all ease 0.3s; }
 
-button.blog_read_more:hover {
+button.blog_read_more:hover, button.go_back_blogs:hover {
   color: #F5F5F5;
-  background-color: #43a7c7; }
+  background-color: #43a7c7;
+  cursor: pointer; }
 
 h2.blog_title {
   margin-bottom: 0; }
@@ -295,7 +297,8 @@ footer {
   .footer_left,
   .footer_right {
     width: 100%;
-    padding: 0; }
+    padding: 0;
+    text-align: center; }
 
   .footer_right {
     height: 50px;
