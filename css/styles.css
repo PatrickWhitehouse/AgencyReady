@@ -1,5 +1,5 @@
 /* Font Import */
-@import "https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans|Raleway:300,400,700";
+@import 'https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans|Raleway:300,400,700';
 /* Variables */
 /* Global Styles */
 * {
@@ -211,6 +211,45 @@ hr {
   background-color: #666666;
   border: none; }
 
+/* Work Page Styling */
+.box {
+  width: 30%;
+  height: 200px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3%;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("https://unsplash.it/200/300/?random");
+  background-size: cover;
+  color: #F5F5F5;
+  text-align: center;
+  transition: 1s ease-in-out all;
+  position: relative; }
+
+.box:before {
+  content: '';
+  display: block;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("https://unsplash.it/200/300/?random");
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-size: cover;
+  transition: opacity .5s ease; }
+
+.box:hover::before {
+  opacity: 1; }
+
+.box_content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2; }
+
 /* Form Styling */
 form {
   width: 100%;
@@ -286,47 +325,42 @@ footer {
   .col-third,
   .col-two-third {
     width: 100%; }
-
   footer {
     height: 100%;
     padding: 0 20px; }
-
   .row {
     padding: 0 20px; }
-
   .footer_left,
   .footer_right {
     width: 100%;
     padding: 0;
     text-align: center; }
-
   .footer_right {
     height: 50px;
     justify-content: center;
     margin-top: 20px;
-    opacity: 0.2; } }
+    opacity: 0.2; }
+  .box {
+    width: 100%;
+    margin-top: 10px; } }
+
 @media (max-width: 560px) {
   nav.main,
   nav.sub_pages {
     justify-content: center;
     flex: 1 0 auto;
     max-height: 80px; }
-
   nav.main ul {
     padding: 0;
     margin: 0; }
-
   nav.sub_pages ul {
     padding: 0;
     margin: 0; }
-
   nav.main li {
     margin: 0;
     padding: 10px; }
-
   nav.sub_pages li {
     margin: 0;
     padding: 10px; }
-
   h1.hero {
     text-align: center; } }
