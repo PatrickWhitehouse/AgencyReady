@@ -288,6 +288,15 @@ hr {
     border: none;
 }
 
+ul.key-tweets{
+  list-style: none;
+  padding: 0;
+  li:before{
+    content: "\2192";
+    margin-right: 5px;
+  }
+}
+
 /* Work Page Styling */
 
 .box{
@@ -387,6 +396,32 @@ input[type=submit]:hover{
   cursor: pointer;
 }
 
+form > div {
+  position: relative;
+}
+form > div > label {
+  position: absolute;
+  left: 5px;
+  top: 15px;
+  opacity: 0;
+  transition: all .3s;
+}
+
+input:valid + label {
+  top: -5px;
+  font-size: 12px;
+  opacity: 1;
+  left: 0;
+}
+
+
+
+textarea:valid + label {
+  top: -5px;
+  font-size: 12px;
+  opacity: 1;
+  left: 0;
+}
 
 /* Footer Styling */
 footer {
