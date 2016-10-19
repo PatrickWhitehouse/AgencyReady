@@ -258,7 +258,7 @@ hr {
   align-items: center;
   justify-content: center;
   margin-right: 3%;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("https://unsplash.it/200/300/?random");
+  background: black;
   background-size: cover;
   color: #F5F5F5;
   text-align: center;
@@ -268,7 +268,7 @@ hr {
 .box:before {
   content: '';
   display: block;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("https://unsplash.it/200/300/?random");
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
   opacity: 0;
   top: 0;
   left: 0;
@@ -288,6 +288,11 @@ hr {
   align-items: center;
   flex-direction: column;
   z-index: 2; }
+
+.box--dpm {
+  background-image: url("../images/dpm_project.jpg");
+  background-size: cover;
+  background-position: center; }
 
 /* Form Styling */
 form {
