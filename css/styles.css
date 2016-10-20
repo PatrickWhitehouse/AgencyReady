@@ -34,7 +34,7 @@ p {
 a {
   font-family: 'Raleway', sans-serif;
   letter-spacing: 1px;
-  color: #43a7c7;
+  color: #215a6d;
   opacity: 0.5;
   transition: 0.3s ease all; }
 
@@ -220,9 +220,9 @@ ul.social_media {
 button.blog_read_more, button.go_back_blogs {
   width: auto;
   padding: 10px;
-  border: 1px solid #43a7c7;
+  border: 1px solid #215a6d;
   background-color: transparent;
-  color: #43a7c7;
+  color: #215a6d;
   font-family: 'Raleway', sans-serif;
   font-size: 0.8em;
   letter-spacing: 1px;
@@ -231,14 +231,14 @@ button.blog_read_more, button.go_back_blogs {
 
 button.blog_read_more:hover, button.go_back_blogs:hover {
   color: #F5F5F5;
-  background-color: #43a7c7;
+  background-color: #215a6d;
   cursor: pointer; }
 
 h2.blog_title {
   margin-bottom: 0; }
 
 p.blog_date {
-  color: #43a7c7;
+  color: #215a6d;
   padding: 0;
   margin-top: 0; }
 
@@ -306,7 +306,7 @@ form {
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: #43a7c7; }
+  color: #215a6d; }
 
 input, textarea {
   width: 70%;
@@ -320,22 +320,22 @@ input[type=text], input[type=email] {
   padding: 10px; }
 
 input:focus, textarea:focus {
-  border: 1px solid #43a7c7;
+  border: 1px solid #215a6d;
   outline: none; }
 
 input[type=submit] {
   padding: 10px;
   background-color: transparent;
   outline: none;
-  border: 1px solid #43a7c7;
-  color: #43a7c7;
+  border: 1px solid #215a6d;
+  color: #215a6d;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all .3s ease; }
 
 input[type=submit]:hover {
   color: #F5F5F5;
-  background-color: #43a7c7;
+  background-color: #215a6d;
   cursor: pointer; }
 
 form > div {
@@ -343,10 +343,17 @@ form > div {
 
 form > div > label {
   position: absolute;
-  left: 5px;
+  left: 0;
   top: 15px;
   opacity: 0;
-  transition: all .3s; }
+  transition: all .3s;
+  font-size: 12px; }
+
+input:focus + label {
+  top: -5px;
+  font-size: 12px;
+  opacity: 1;
+  left: 0; }
 
 input:valid + label {
   top: -5px;

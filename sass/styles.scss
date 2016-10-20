@@ -3,7 +3,7 @@
 /* Variables */
 $darkgrey: #292929;
 $lightgrey: #F5F5F5;
-$lightblue: #43a7c7;
+$lightblue: #215a6d;
 $grey: #666666;
 /* Global Styles */
 * {
@@ -401,13 +401,21 @@ form > div {
 }
 form > div > label {
   position: absolute;
-  left: 5px;
+  left: 0;
   top: 15px;
   opacity: 0;
   transition: all .3s;
+  font-size: 12px;
 }
 
-input:valid + label {
+input:focus + label {
+  top: -5px;
+  font-size: 12px;
+  opacity: 1;
+  left: 0;
+}
+
+input:valid + label{
   top: -5px;
   font-size: 12px;
   opacity: 1;
