@@ -1,4 +1,0 @@
-RewriteEngine On
-RewriteCond %{HTTP_HOST} !^patrickwhitehouse.pw$ [NC]
-RewriteRule ^(.*)$ http://patrickwhitehouse.pw/$1 [L,R=301]
-Options +MultiViews
