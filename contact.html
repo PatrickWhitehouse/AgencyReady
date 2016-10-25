@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="bottom_footer">
+<body class="bottom_footer animated fadeIn">
 
     <!-- Start Navigation -->
 
@@ -31,7 +31,7 @@
 
     <!-- Start About Content -->
 
-    <main>
+    <main role="main">
         <div class="wrapper">
 
             <div class="row">
@@ -48,7 +48,7 @@
 
             <div class="row">
                 <div class="col-half">
-                    <form action="form.php" method="post" enctype="multipart/form-data" id="contact_form">
+                    <form action="form.php" method="post" enctype="multipart/form-data" id="contact_form" role="form">
 
                       <div>
                       <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -74,6 +74,16 @@
 
                     </form>
                 </div>
+
+                <div class="col-half">
+                  <h3>My social media</h3>
+                  <ul class="social_media">
+                    <li>Twitter - <a href="http://www.twitter.com/patrickdoesweb" title="Open Patrick's personal Twitter profile">@patrickdoesweb</a></li>
+                    <li>Facebook - <a href="http://www.facebook.com/padwhitehouse" title="Open Patrick's personal Facebook profile">Patrick Whitehouse</a></li>
+                    <li>Instagram - <a href="http://www.instagram.com/p.ad" title="Open Patrick's personal Instagram profile">P.ad</a></li>
+                  </ul>
+                </div>
+
             </div>
       </div>
     </main>
