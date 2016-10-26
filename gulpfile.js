@@ -12,10 +12,10 @@ gulp.task('server', function() {
             baseDir: "./"
         },
         host: "192.168.10.121",
-        notify: 'false'
+        notify: false
     });
 
-    gulp.watch("./*.html").on('change', browserSync.reload)
+    gulp.watch("./**/*.html").on('change', browserSync.reload)
 });
 
 gulp.task('sass', function() {
@@ -37,7 +37,7 @@ gulp.task('build:clean', function(){
 });
 
 gulp.task('build:copy', ['build:clean'], function(){
-  return gulp.src('./*')
+  return gulp.src('./**')
   .pipe(gulp.dest('./build/'))
 });
 
@@ -45,7 +45,7 @@ gulp.task('build:copy', ['build:clean'], function(){
 
 gulp.task('build:remove', ['build:copy'], function(cb){
   return Promise.all([
-  del([
+  del.sync([
     './build/sass',
     './build/node_modules',
     './build/config.codekit',
