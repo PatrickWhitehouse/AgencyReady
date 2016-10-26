@@ -472,14 +472,15 @@ textarea:valid + label {
   left: 0;
 }
 
-
-svg{
-  margin-right: 20px;
-}
-
-svg .svg-instagram{
-  &:hover{
-    fill: red;
+.flex-svg{
+  align-items: center;
+  display: flex;
+  margin-top: 10px;
+  &:last-of-type{
+    margin-bottom: 20px;
+  }
+  img{
+    margin-right: 20px;
   }
 }
 

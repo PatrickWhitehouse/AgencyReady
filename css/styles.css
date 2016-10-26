@@ -2658,11 +2658,14 @@ textarea:valid + label {
   opacity: 1;
   left: 0; }
 
-svg {
-  margin-right: 20px; }
-
-svg .svg-instagram:hover {
-  fill: red; }
+.flex-svg {
+  align-items: center;
+  display: flex;
+  margin-top: 10px; }
+  .flex-svg:last-of-type {
+    margin-bottom: 20px; }
+  .flex-svg img {
+    margin-right: 20px; }
 
 /* Footer Styling */
 footer {
