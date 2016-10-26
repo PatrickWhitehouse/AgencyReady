@@ -2297,7 +2297,8 @@ h4 {
 
 p {
   line-height: 1.8;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.5px;
+  font-size: calc(1em + .15vw); }
 
 a {
   font-family: 'Raleway', sans-serif;
@@ -2591,7 +2592,7 @@ ul.key-tweets {
     width: 70%;
     margin: 20px auto; }
 
-/* Form Styling */
+/* Contact Styling */
 form {
   width: 100%;
   display: flex;
@@ -2656,6 +2657,12 @@ textarea:valid + label {
   font-size: 12px;
   opacity: 1;
   left: 0; }
+
+svg {
+  margin-right: 20px; }
+
+svg .svg-instagram:hover {
+  fill: red; }
 
 /* Footer Styling */
 footer {
