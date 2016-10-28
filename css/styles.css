@@ -2531,6 +2531,31 @@ ul.key-tweets {
     content: "\2192";
     margin-right: 5px; }
 
+.colour-swatch-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+
+.colour-swatch {
+  width: 25%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center; }
+
+.colour-swatch--box {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5); }
+  .colour-swatch--box--dgrey {
+    background-color: #292929; }
+  .colour-swatch--box--mgrey {
+    background-color: #666666; }
+  .colour-swatch--box--grey {
+    background-color: #F5F5F5; }
+  .colour-swatch--box--blue {
+    background-color: #215a6d; }
+
 .blog-example {
   max-width: 50%;
   margin: 10px auto;
@@ -2747,4 +2772,8 @@ footer {
   .slider {
     height: 300px; }
   .blog-example {
-    max-width: 100%; } }
+    max-width: 100%; }
+  .colour-swatch-wrapper {
+    display: block; }
+  .colour-swatch {
+    width: 100%; } }

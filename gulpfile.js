@@ -34,7 +34,7 @@ gulp.task('watch', function(){
 // Prefix Tasks
 
 gulp.task('prefix', () =>
-    gulp.src('css/styles.css')
+    gulp.src('build/css/styles.css')
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
