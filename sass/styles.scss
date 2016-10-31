@@ -14,8 +14,8 @@ $grey: #666666;
 }
 
 ::selection{
-  color: black;
-  background: yellow;
+  color: white;
+  background-color: $lightblue;
 }
 
 body {
@@ -61,8 +61,7 @@ a:hover {
 }
 
 a:focus{
-  background: yellow;
-  color: black;
+  outline: thin dotted;
 }
 
 .wrapper {
@@ -187,11 +186,9 @@ nav.sub_pages a:hover {
 }
 /* Hero Section Styling */
 section.hero {
-    height: 95vh;
-    background: linear-gradient(90deg, rgba(0,0,0, .8), rgba(0,0,0,.6)), url('../images/hero_bg.jpg');
-    background: -webkit-linear-gradient(90deg, rgba(0,0,0, .8), rgba(0,0,0,.6)), url('../images/hero_bg.jpg');
+    height: 85vh;
+    background-image: url(../images/hero.png);
     background-position: center center;
-    background-size: cover;
     background-attachment: fixed;
     color: $lightgrey;
     display: flex;
@@ -228,39 +225,56 @@ ul.social_media {
 
 /* About Page Styling*/
 
-.slider{
-  overflow: hidden;
-
-  height: 400px;
-}
-
-.slider figure img{
-  width: 25%;
-  float: left;
-  background-size: cover;
-}
-
-.slider figure{
+.rslides {
   position: relative;
-  width: 400%;
-  height: 100%;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
   margin: 0;
-  left: 0;
-  animation: 15s slider infinite;
-  text-align: left;
-}
+  }
 
-@keyframes slider {
-  0% {left: 0%;}
-  20% {left: 0%;}
-  25% {left: -100%;}
-  45% {left: -100%;}
-  50% {left: -200%;}
-  70% {left: -200%;}
-  75% {left: -300%;}
-  95% {left: -300%;}
-  100% {left: 0%;}
-}
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+  .slide-tab{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  p.caption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.4);
+    display: flex;
+    color: $lightgrey;
+    padding: 20px;
+    margin: 0;
+  }
 
 /* Blog Post Styling */
 button.blog_read_more, button.go_back_blogs {
@@ -468,40 +482,9 @@ input[type=submit]:hover{
   cursor: pointer;
 }
 
-form > div {
-  position: relative;
-}
-form > div > label {
-  position: absolute;
-  left: 0;
-  top: 15px;
-  opacity: 0;
-  transition: all .3s;
-  font-size: 12px;
-}
-
-input:focus + label {
-  top: -5px;
-  font-size: 12px;
-  opacity: 1;
-  left: 0;
-}
-
-input:valid + label{
-  top: -5px;
-  font-size: 12px;
-  opacity: 1;
-  left: 0;
-}
 
 
 
-textarea:valid + label {
-  top: -5px;
-  font-size: 12px;
-  opacity: 1;
-  left: 0;
-}
 
 .flex-svg{
   align-items: center;
@@ -512,8 +495,33 @@ textarea:valid + label {
   }
   img{
     margin-right: 20px;
+    transition: all ease-in-out .2s;
   }
 }
+
+button.download{
+  width: 70%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $lightblue;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 8px 0px rgba($lightblue,.8), 1px 20px 20px rgba(0,0,0,.2);
+  margin-bottom: 20px;
+  color: $lightgrey;
+  font-size: .8em;
+  text-transform: uppercase;
+  p{
+    margin: 0;
+  }
+  img{
+    height: 50%;
+    margin-right: 10px;
+  }
+}
+
 
 /* Footer Styling */
 footer {
@@ -523,6 +531,9 @@ footer {
     background-color: $darkgrey;
     color: $lightgrey;
     font-size: 0.8em;
+    a{
+      color: lighten($lightblue, 50%);
+    }
 }
 
 .footer_left,

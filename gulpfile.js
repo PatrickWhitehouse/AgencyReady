@@ -39,7 +39,7 @@ gulp.task('prefix', () =>
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('css/'))
+        .pipe(gulp.dest('build/css/'))
 );
 
 
