@@ -277,9 +277,10 @@ ul.social_media {
   }
 
 /* Blog Post Styling */
-button.blog_read_more, button.go_back_blogs {
-    display: block;
-    width: auto;
+a.blog_read_more, a.go_back_blogs {
+    display: inline;
+    width: 150px;
+    text-align: center;
     padding: 10px;
     border: 1px solid $lightblue;
     background-color: transparent;
@@ -292,7 +293,7 @@ button.blog_read_more, button.go_back_blogs {
 }
 
 
-button.blog_read_more:hover, button.go_back_blogs:hover {
+a.blog_read_more:hover, a.go_back_blogs:hover {
     color: $lightgrey;
     background-color: $lightblue;
     cursor: pointer;
@@ -433,6 +434,10 @@ ul.key-tweets{
     width: 70%;
     margin: 20px auto;
   }
+  a{
+    display: block;
+    width: 100%;
+  }
 }
 
 
@@ -513,7 +518,7 @@ button.download{
   color: $lightgrey;
   font-size: .8em;
   text-transform: uppercase;
-  p{
+  span{
     margin: 0;
   }
   img{
