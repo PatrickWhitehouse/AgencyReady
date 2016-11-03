@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="bottom_footer">
+<body class="animated fadeIn">
 
     <!-- Start Navigation -->
-
+    <a href="#content" class="skip-link">Skip Navigation</a>
     <nav class="sub_pages" role="navigation">
         <ul>
             <li><a href="index.html" title="Patrick Whitehouse's portfolio home page">Home</a></li>
@@ -31,7 +31,7 @@
 
     <!-- Start About Content -->
 
-    <main>
+    <main role="main" id="content">
       <div class="wrapper">
 
         <div class="row">
@@ -40,18 +40,6 @@
           </div>
         </div>
 
-      <div class="row">
-        <div class="col-full">
-          <div class="slider">
-            <figure>
-              <img src="https://unsplash.it/500" alt="">
-              <img src="https://unsplash.it/500" alt="">
-              <img src="https://unsplash.it/500" alt="">
-              <img src="https://unsplash.it/500" alt="">
-            </figure>
-          </div>
-        </div>
-      </div>
 
       <div class="row">
         <div class="col-full">
@@ -59,12 +47,37 @@
 
           <p>I'm currently living in a town just outside of Manchester city centre named Denton. I've lived here all my life however I don't plan on living here forever! The world is a big place and I feel that I need to explore it before it's too late. On the topic of travelling, I've been very fortunate to have visited numerous of places. Once I have gained experience in the digital industry, I hope that I can take my skills overseas and reside in the US or Australia. </p>
 
-          <p>I have always been an outgoing individual. During my early teenage years, I was very fortunate to have been given the oppourtunity to play for a professional football club, Rochdale AFC. I was a footballer here for roughly two years before being released. I decided to experience a new sport and decided to compete in basketball. Again, I progressed quite far in this sport. Sporting achievements aside, I have won multiple academic awards at my high school. At school I was a hard working individual who wanted the best grades possible. </p>
+          <p>I have always been an outgoing individual. During my early teenage years, I was very fortunate to have been given the oppourtunity to play for a professional football club, Rochdale AFC. I was a footballer here for roughly two years before being released. After I was released I decided to experience a new sport and decided to compete in basketball. Again, I progressed quite far in this sport. Sporting achievements aside, I have won multiple academic awards at my high school. At school I was a hard working individual who wanted the best grades possible. </p>
 
-          <p>Before coming to university, I attended a sixth form college where I studied ICT. From a young age I have always known that IT will shape my future and be a key part in my life. My father too has always been in the IT industry (network category) and therefore I learnt a lot at an early age from him.</p>
+          <p>Before coming to university, I attended a sixth form college where I studied ICT. From a young age I have always had a gut instinct that IT will shape my future and be a key part in my life. My father too has always been in the IT industry (networking) and therefore I learnt a lot of IT skills at an early age from him.</p>
 
+          <p>After I've achieved my degree, I hope to find a career within the industry working as a front end web developer as this is where my passion lies. After I've grasped the basics and have a feel for what it is like working within the industry, I would like to experience working as a freelance developer. </p>
+
+          <p>In my free time, I enjoy attending car meets. This gives me an opportunity to build on my socialising skills and the chance to create new friendships. Majority of the time, I take my camera along to photograph the meet. </p>
         </div>
       </div>
+
+      <!-- Start Slideshow -->
+      <div class="row">
+        <div class="col-full">
+          <ul class="rslides">
+            <li>
+              <img src="images/audry_1.jpg" alt="">
+              <p class="caption">My dog - Audrey</p>
+            </li>
+            <li>
+              <img src="images/hero_bg.jpg" alt="">
+              <p class="caption">My car before a car meet</p>
+            </li>
+            <li>
+              <img src="images/audry_2.jpg" alt="">
+              <p class="caption">Another of my dog - Audrey</p>
+            </li>
+          </ul>
+          <ul class="slide-tab"></ul>
+        </div>
+      </div>
+      <!-- End Slideshow -->
 
       </div>
     </main>
@@ -93,8 +106,17 @@
 
 
     <!-- Twitter Scripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript" src="js/twitterFetcher.js"></script>
     <script type="text/javascript" src="js/twitter-feed.js"></script>
+    <script type="text/javascript" src="js/slides.js"></script>
+    <script>
+      $(function() {
+      $(".rslides").responsiveSlides({
+
+      });
+      });
+</script>
 
 
 </body>

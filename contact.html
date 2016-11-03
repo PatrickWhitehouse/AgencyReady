@@ -8,15 +8,20 @@
     <meta name="author" content="Patrick Whitehouse">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact - Patrick Whitehouse</title>
+    <title>Contact Patrick - Patrick Whitehouse</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js" charset="utf-8"></script>
 </head>
 
-<body class="bottom_footer">
+<body class="animated fadeIn">
 
     <!-- Start Navigation -->
-
+    <a href="#content" class="skip-link">Skip Navigation</a>
     <nav class="sub_pages" role="navigation">
         <ul>
             <li><a href="index.html" title="Patrick Whitehouse's portfolio home page">Home</a></li>
@@ -29,9 +34,9 @@
 
     <!-- End Navigation -->
 
-    <!-- Start About Content -->
+    <!-- Start Contact Content -->
 
-    <main>
+    <main role="main" id="content">
         <div class="wrapper">
 
             <div class="row">
@@ -47,27 +52,70 @@
             </div>
 
             <div class="row">
+
+              <div class="col-half">
+                <h3>Places you can find me!</h3>
+                <div class="flex-svg">
+                  <img src="../images/facebook.svg" alt="Facebook logo">
+                  <a href="http://www.facebook.com/padwhitehouse" title="Take a look at Patrick's Facebook profile">Patrick Whitehouse</a>
+                </div>
+                <div class="flex-svg">
+                  <img src="../images/instagram.svg" alt="Instagram logo">
+                  <a href="http://www.instagram.com/p.ad" title="Take a look at Patrick's Instagram feed">P.ad</a>
+                </div>
+                <div class="flex-svg">
+                  <img src="../images/twitter.svg" alt="Twitter logo">
+                  <a href="http://www.twitter.com/patrickdoesweb" title="Take a look at Patrick's Twitter feed">@patrickdoesweb</a>
+                </div>
+                <h3>Take a look at my skills.</h3>
+                <button type="submit" onclick="window.open('images/audry_1.jpg')" class="download">
+                  <img src="../images/download.svg" alt="">
+                  <span>Download my CV!</span>
+                </button>
+              </div>
+
                 <div class="col-half">
-                    <form action="form.php" method="post" enctype="multipart/form-data" id="contact_form">
+                    <h3>Don't have social media? No problem.</h3>
+                    <form action="form.php" method="post"  enctype="multipart/form-data" id="contact_form" role="form">
 
-                      <label for="name">Your name</label>
-                      <input type="text" id="name" name="name"><br>
+                      <div>
+                      <label for="name"></label>
+                      <br>
+                      <input type="text" id="name" name="name" placeholder="Your name">
 
-                      <label for="email">Your email</label>
-                      <input type="email" id="email" name="email"><br>
 
-                      <label for="message">Your message</label>
-                      <textarea name="message" id="message" cols="30" rows="10"></textarea><br>
+                    </div>
+                    <br>
+
+                    <div>
+                      <label for="email"></label>
+                      <br>
+                      <input type="email" id="email" name="email" placeholder="Your email">
+
+
+                    </div>
+                    <br>
+
+                      <div>
+                        <label for="message"></label>
+                        <br>
+                      <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message"></textarea>
+
+                    </div>
+                    <br>
 
                       <input type="submit" name="submit" value="Submit">
 
                     </form>
                 </div>
+
+
+
             </div>
       </div>
     </main>
 
-    <!-- End About Content -->
+    <!-- End Contact Content -->
 
 
     <!-- Start Footer -->
@@ -93,8 +141,7 @@
     <!-- Twitter Scripts -->
     <script type="text/javascript" src="js/twitterFetcher.js"></script>
     <script type="text/javascript" src="js/twitter-feed.js"></script>
-
-
+    <script src="js/main.js" charset="utf-8"></script>
 </body>
 
 </html>
