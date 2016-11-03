@@ -453,6 +453,7 @@ button.download {
     margin: 0; }
   button.download img {
     height: 50%;
+    transform: scale(1.5);
     margin-right: 10px; }
 
 /* Footer Styling */
@@ -528,10 +529,10 @@ footer {
     margin: 0; }
   nav.main li {
     margin: 0;
-    padding: 10px; }
+    padding: 10px 5px; }
   nav.sub_pages li {
     margin: 0;
-    padding: 10px; }
+    padding: 10px 5px; }
   h1.hero {
     text-align: center; }
   .slider {
