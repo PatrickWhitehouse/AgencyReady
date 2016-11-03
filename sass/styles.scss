@@ -64,6 +64,18 @@ a:focus{
   outline: thin dotted;
 }
 
+.skip-link{
+  display: inline;
+  float: left;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  opacity: 0;
+  &:focus{
+    opacity: 1;
+  }
+}
+
 .wrapper {
     max-width: 960px;
     margin: 0 auto;
@@ -214,13 +226,7 @@ img.portrait {
     max-width: 100%;
 }
 
-ul.social_media {
-    padding: 0;
 
-    li {
-        list-style: none;
-    }
-}
 
 
 /* About Page Styling*/
