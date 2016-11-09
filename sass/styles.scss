@@ -69,10 +69,9 @@ a:focus{
   float: left;
   position: absolute;
   left: 10px;
-  top: 10px;
-  opacity: 0;
+  top: -999px;
   &:focus{
-    opacity: 1;
+    top: 10px;
   }
 }
 
@@ -150,7 +149,7 @@ nav.main li {
 
 nav.main a {
     color: $lightgrey;
-    opacity: 0.7;
+    opacity: 0.85;
     text-decoration: none;
     font-size: 0.75em;
     transition: 0.3s all ease;
@@ -365,7 +364,7 @@ ul.key-tweets{
 
 
 .blog-example{
-  max-width: 50%;
+  max-width: 70%;
   margin: 10px auto;
   display: block;
 }
@@ -611,6 +610,9 @@ footer {
       width: 100%;
       margin-top:10px;
     }
+    .blog-example{
+      min-width: 100%;
+    }
 }
 @media (max-width:560px) {
     nav.main,
@@ -647,9 +649,7 @@ footer {
       height: 300px;
     }
 
-    .blog-example{
-      max-width: 100%;
-    }
+
 
     .colour-swatch-wrapper{
       display: block
@@ -658,6 +658,21 @@ footer {
     .colour-swatch{
       width: 100%;
     }
+
+
+}
+
+@media (max-width:300px){
+  nav.main li {
+      margin: 0;
+      padding: 10px 2px;
+  }
+
+  nav.sub_pages li {
+      margin: 0;
+      padding: 10px 2px;
+  }
+
 
 
 }
