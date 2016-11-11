@@ -190,7 +190,7 @@ nav.sub_pages a:hover {
 
 /* Hero Section Styling */
 section.hero {
-  height: 85vh;
+  height: 75vh;
   background-image: url(../images/hero.png);
   background-position: center center;
   background-attachment: fixed;
