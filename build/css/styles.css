@@ -4,11 +4,6 @@
 Animate.css
 https://daneden.github.io/animate.css/
 */
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
 
 @keyframes fadeIn {
   0% {
@@ -17,21 +12,20 @@ https://daneden.github.io/animate.css/
     opacity: 1; } }
 
 .fadeIn {
-  -webkit-animation-name: fadeIn;
   animation-name: fadeIn; }
 
 .animated {
-  -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
 /* Variables */
 /* Global Styles */
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+::-moz-selection {
+  color: white;
+  background-color: #215a6d; }
 
 ::selection {
   color: white;
@@ -41,13 +35,16 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 100%;
   min-height: 100vh;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
   color: #292929;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important; }
 
 main {
+  -ms-flex: 1 0 auto;
   flex: 1 0 auto; }
 
 h1,
@@ -130,8 +127,11 @@ nav.main {
   width: 100%;
   height: 80px;
   background-color: transparent;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: end;
   justify-content: flex-end;
+  -ms-flex-align: center;
   align-items: center;
   position: absolute;
   top: 0;
@@ -163,8 +163,11 @@ nav.sub_pages {
   max-height: 80px;
   background-color: transparent;
   border-bottom: 1px solid #666666;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: end;
   justify-content: flex-end;
+  -ms-flex-align: center;
   align-items: center;
   top: 0;
   left: 0; }
@@ -195,9 +198,13 @@ section.hero {
   background-position: center center;
   background-attachment: fixed;
   color: #F5F5F5;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center; }
 
 h1.hero {
@@ -246,7 +253,9 @@ img.portrait {
 .slide-tab {
   width: 100%;
   padding: 0;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: justify;
   justify-content: space-between; }
 
 p.caption {
@@ -255,6 +264,7 @@ p.caption {
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+  display: -ms-flexbox;
   display: flex;
   color: #F5F5F5;
   padding: 20px;
@@ -304,14 +314,20 @@ ul.key-tweets {
 
 .colour-swatch-wrapper {
   width: 100%;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: justify;
   justify-content: space-between; }
 
 .colour-swatch {
   width: 25%;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex: 1;
   flex: 1;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-align: center;
   align-items: center; }
 
 .colour-swatch--box {
@@ -333,13 +349,16 @@ ul.key-tweets {
   display: block; }
 
 p.references {
-  font-size: 90%; }
+  font-size: 90%;
+  word-wrap:break-word; }
 
 /* Work Page Styling */
 .workwrapper {
   width: 95%;
   background-color: #F5F5F5;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex: 1 0 0;
   flex: 1 0 0;
   margin: 0 auto 100px auto;
   position: relative;
@@ -397,7 +416,9 @@ p.references {
 /* Contact Styling */
 form {
   width: 100%;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
   color: #215a6d; }
 
@@ -432,7 +453,9 @@ input[type=submit]:hover {
   cursor: pointer; }
 
 .flex-svg {
+  -ms-flex-align: center;
   align-items: center;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 10px; }
   .flex-svg:last-of-type {
@@ -444,8 +467,11 @@ input[type=submit]:hover {
 button.download {
   width: 70%;
   height: 40px;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #215a6d;
   border: none;
@@ -461,6 +487,10 @@ button.download {
     height: 50%;
     transform: scale(1.5);
     margin-right: 10px; }
+
+  button.download > span{
+    width: 100%;
+  }
 
 /* Footer Styling */
 footer {
@@ -482,8 +512,11 @@ footer {
   display: inline-block; }
 
 .footer_right {
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -ms-flex-pack: end;
   justify-content: flex-end;
+  -ms-flex-align: center;
   align-items: center;
   width: 50%;
   float: right;
@@ -495,6 +528,12 @@ footer {
 #twitter-widget ul {
   list-style: none;
   padding: 0; }
+
+  .validation-footer{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -514,6 +553,7 @@ footer {
     text-align: center; }
   .footer_right {
     height: 50px;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-top: 20px; }
   .box {
@@ -525,7 +565,9 @@ footer {
 @media (max-width: 560px) {
   nav.main,
   nav.sub_pages {
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex: 1 0 auto;
     flex: 1 0 auto;
     max-height: 80px; }
   nav.main ul {
