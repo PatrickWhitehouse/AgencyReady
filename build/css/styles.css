@@ -122,6 +122,10 @@ a:focus {
 .cf:after {
   clear: both; }
 
+figcaption{
+  text-align: center;
+}
+
 /* Navigation Styling */
 nav.main {
   width: 100%;
