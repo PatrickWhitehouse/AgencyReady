@@ -1,15 +1,52 @@
 <?php
 
-  $name = trim($_POST['name']);
-  $email = trim($_POST['email']);
-  $msg = $_POST['message'];
-  $to = "patrick1996@gmail.com";
-  $subject = "New Form";
-  $headers = "From: $email";
+$name = $_POST['name'];
+$email = $_POST['email'];
+$msg = $_POST['message'];
 
-  mail($to, $subject, $msg, $headers);
+require 'phpmailer/PHPMailerAutoload.php';
 
 
+
+
+
+
+$mail = new PHPMailer;
+
+//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = 'patrick1996@gmail.com';                 // SMTP username
+$mail->Password = 'paddyownsoncod';                           // SMTP password
+$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 465;                                    // TCP port to connect to
+
+$mail->setFrom('patrick1996@gmail.com', 'Website Form');   // Add a recipient
+$mail->addAddress('14018562@stu.mmu.ac.uk');               // Name is optional
+
+$mail->isHTML(true);                            // Set email format to HTML
+
+$mail->Subject = 'New Form Submission';
+$mail->Body    = '<style type="text/css">
+                  body{
+                    font-size: 20px;
+                    color: blue;
+                    font-family: serif;
+                    font-weight:bold;
+                  }
+                  </style>
+                  <br>
+                  From: ' . $name . '<br>
+                  Email: ' . $email . '<br>
+                  Message: ' . $msg;
+
+
+if(!$mail->send()) {
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+}
 
 
 ?>

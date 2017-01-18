@@ -9,8 +9,3 @@ var configProfile = {
   "lang": 'en'
 };
 twitterFetcher.fetch(configProfile);
-
-
-// JavaScript
-window.sr = ScrollReveal();
-sr.reveal('.workwrapper');
