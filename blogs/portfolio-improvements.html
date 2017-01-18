@@ -49,8 +49,34 @@
             </div>
 
             <div class="row">
-                <a href="http://old.patrickwhitehouse.pw">My Original Version</a>
+                <a href="http://old.patrickwhitehouse.pw" title="Previous version of my portfolio">Previous version of this portfolio, before any changes were made.</a>
             </div>
+
+            <div class="row">
+              <div class="col-full">
+                <p>I was very impressed with my feedback that I was given at university regarding my portfolio, however, there was still room for improvement.</p>
+
+                <p>I’ve made several subtle changes to my portfolio over the past couple of weeks. Although they may be unnoticeable, I can assure you the changes I’ve made are clear and visible once compared with the previous version of my portfolio. </p>
+
+                <h2>The changes:</h2>
+
+                <h3>Opacity of links and images</h3>
+                <p>I originally focused far too much on UX and trying to providing the user with a positive experience that didn’t involve a simple and boring static HTML website. I therefore implemented animated hover states that simply changed opacity of a link element once the mouse was hovering over it. Rather than animating it from, for example, 100% opacity to 80%, I did it in reverse. The link went from semi-transparent to fully visible. I’ve chosen to change this as on mobile devices, the user cannot hover over an element, meaning the links will appear transparent causing a usability issue.</p>
+
+                <h3>Blog post buttons</h3>
+                <p>Again, another accessibility issue. On my blog directory page, I had placed a button underneath the brief description of each blog. Each button said “Read full post”. If a screen reader was browsing this page, it would list “Read full post” numerous times, which could cause confusion for the user as they may not remember what the blog title was above the button. I therefore decided to change the buttons with text relevant to the blog post.</p>
+
+                <h3>Navigation</h3>
+                <p>On some mobile devices, the space in between the navigation links isn’t enough and causes the user to click on the wrong page. I have increased both the font size and the spacing to ensure that the user can confidently tap the link they need. As my portfolio is only a few pages, I still don’t see the need in implementing a hamburger menu as this will only slow the user down. I want the user to be able to navigate around my portfolio with ease and confidence.</p>
+
+                <h3>Footer</h3>
+                <p>A small bug which was corrected was the content overflowing the footer. As the footer loads Tweets from my Twitter account, it’s impossible to predict the height and width of each Tweet. I had set a fixed height for the footer of 200px. If the JavaScript plugin loaded a relatively large Tweet from my account, it would break onto a new line, causing it to push content below it outside of the footer. This was resolved by removing the fixed height, allowing the footer to resize depending on the content within it. </p>
+
+
+              </div>
+            </div>
+
+          </div>
       </article>
     </main>
 
