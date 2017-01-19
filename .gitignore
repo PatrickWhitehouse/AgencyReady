@@ -8,6 +8,7 @@
 *.so
 .gitignore
 config.codekit
+form.php
 
 # Packages #
 ############
