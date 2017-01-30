@@ -170,20 +170,12 @@ nav.main a:hover:after {
 nav.main a:hover {
   opacity: .85; }
 
-nav span.mobile {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  display: none;
-  z-index: 999; }
-
 /* Sub Page Navigation */
 nav.sub_pages {
   width: 100%;
   min-height: 80px;
   max-height: 80px;
   background-color: transparent;
-  border-bottom: 1px solid #666666;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -204,12 +196,23 @@ nav.sub_pages a {
   font-size: 1em;
   transition: 0.3s all ease;
   text-transform: uppercase;
-  font-weight: 500; }
+  font-weight: 500;
+  position: relative; }
+
+nav.sub_pages a:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid #222;
+  transition: 0.4s; }
 
 nav.sub_pages a:hover {
-  opacity: 0.7;
-  transition: 0.3s all ease;
-  text-decoration: underline; }
+  opacity: 1; }
+
+nav.sub_pages a:hover:after {
+  width: 100%; }
 
 /* Hero Section Styling */
 section.hero {
@@ -363,63 +366,42 @@ p.references {
   font-size: 90%; }
 
 /* Work Page Styling */
-.workwrapper {
-  width: 95%;
-  background-color: #F5F5F5;
-  display: flex;
-  flex: 1 0 0;
-  margin: 0 auto 100px auto;
-  position: relative;
-  z-index: 100;
-  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.15); }
-
-.workwrapper::after {
-  content: ' ';
-  width: 1px;
-  height: 100px;
-  background-color: #292929;
-  position: absolute;
-  left: 50%;
-  bottom: -100px;
-  z-index: -1; }
-
-.workwrapper:last-child::after {
-  display: none; }
-
-.workwrapper--alternate {
-  background-color: #e8e8e8; }
-
-.workwrapper__content {
-  position: relative;
-  height: 100%;
+.work {
   width: 100%;
-  padding: 20px 0; }
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap; }
 
-.workwrapper--image {
-  text-align: center; }
-  .workwrapper--image img {
+.work__item {
+  width: 50%;
+  margin: 15px 10px;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  background: #F5F5F5;
+  justify-content: space-around; }
+  .work__item--image {
     max-width: 90%;
-    opacity: 1;
-    margin-bottom: 30px; }
-
-.workwrapper--text {
-  position: static;
-  bottom: 0;
-  width: 90%;
-  margin: 0 auto; }
-  .workwrapper--text p {
-    width: 100%;
-    margin: 10px auto; }
-  .workwrapper--text h3 {
-    width: 100%;
-    margin: 0 auto;
-    padding: 10px 0; }
-  .workwrapper--text button {
-    width: 70%;
     margin: 20px auto; }
-  .workwrapper--text a {
+  .work__item--title {
+    font-weight: bold;
+    color: #215a6d;
+    font-size: 1.4em; }
+  .work__item--cta {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
     display: block;
-    width: 100%; }
+    text-transform: uppercase;
+    border: 2px solid #215a6d;
+    padding: 10px;
+    font-weight: bold; }
+    .work__item--cta:hover {
+      color: #FFF;
+      background-color: #215a6d;
+      opacity: 1; }
+  .work__item--title, .work__item--desc {
+    padding: 0 20px; }
 
 /* Contact Styling */
 form {
