@@ -127,12 +127,27 @@ a:focus {
   clear: both; }
 
 /* Navigation Styling */
+span.brand, span.brand-sub {
+  color: #F5F5F5;
+  opacity: 1;
+  text-decoration: none;
+  font-size: 1em;
+  transition: 0.3s all ease;
+  text-transform: uppercase;
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  margin-left: 40px;
+  font-weight: bold; }
+
+span.brand-sub {
+  color: #000; }
+
 nav.main {
   width: 100%;
   height: 80px;
   background-color: transparent;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   position: absolute;
   top: 0;
@@ -176,8 +191,9 @@ nav.sub_pages {
   min-height: 80px;
   max-height: 80px;
   background-color: transparent;
+  border-bottom: 1px solid gray;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   top: 0;
   left: 0; }
@@ -536,14 +552,20 @@ footer {
   .blog-example {
     min-width: 100%; }
   section.hero {
-    background: #2d2d2d; } }
+    background: #2d2d2d; }
+  nav {
+    flex-direction: column; }
+  span.brand, span.brand-sub {
+    margin: 20px 0; } }
 
 @media (max-width: 560px) {
   nav.main,
   nav.sub_pages {
     justify-content: center;
     flex: 1 0 auto;
-    max-height: 80px; }
+    min-height: 150px; }
+  nav.sub_pages {
+    border-bottom: 1px solid gray; }
   nav.main ul {
     padding: 0;
     margin: 0; }
