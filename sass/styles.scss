@@ -696,6 +696,10 @@ footer {
 
 }
 @media (max-width:560px) {
+
+    section.hero{
+      min-height: 60vh;
+    }
     nav.main,
     nav.sub_pages {
         justify-content: center;
@@ -711,7 +715,7 @@ footer {
     nav.main ul {
         padding: 0;
         margin: 0;
-
+        display: flex;
     }
     span.brand{
       display: none;
@@ -720,6 +724,7 @@ footer {
     nav.sub_pages ul {
         padding: 0;
         margin: 0;
+        display: flex;
     }
 
     nav.main li {
