@@ -143,11 +143,14 @@ span.brand, span.brand-sub{
   position: relative;
   font-family: 'Raleway', sans-serif;
   margin-left: 40px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
+
+
 span.brand-sub{
-  color: #000;
+  color: $lightblue;
+  font-family: 'Open Sans', sans-serif;
 }
 
 nav.main {
@@ -262,10 +265,10 @@ nav.sub_pages a:hover:after{
 /* Hero Section Styling */
 section.hero {
     height: 75vh;
-    background-image: url('../images/hero_portrait.png');
+    background-image: url('../images/hero_couple.jpg');
     background-position: center;
     background-attachment:fixed;
-    background-size: cover;
+    background-size:cover;
     background-repeat: no-repeat;
     color: $lightgrey;
     display: flex;
@@ -675,9 +678,7 @@ footer {
       min-width: 100%;
     }
 
-    section.hero{
-        background: #2d2d2d;
-    }
+
 
     nav{
       flex-direction: column;
@@ -686,8 +687,10 @@ footer {
 
 
     span.brand, span.brand-sub{
-      margin: 20px 0;
+      margin:0 0 20px 0;
     }
+
+
 
 
 
@@ -709,6 +712,9 @@ footer {
         padding: 0;
         margin: 0;
 
+    }
+    span.brand{
+      display: none;
     }
 
     nav.sub_pages ul {
