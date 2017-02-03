@@ -690,15 +690,8 @@ footer {
       margin:0 0 20px 0;
     }
 
-
-
-
-
-}
-@media (max-width:560px) {
-
-    section.hero{
-      min-height: 60vh;
+    span.brand{
+      display: none;
     }
     nav.main,
     nav.sub_pages {
@@ -707,6 +700,15 @@ footer {
         min-height: 150px;
 
     }
+
+
+}
+@media (max-width:560px) {
+
+    section.hero{
+      min-height: 60vh;
+    }
+
 
     nav.sub_pages{
       border-bottom: 1px solid lighten(#000, 50%);
@@ -717,9 +719,7 @@ footer {
         margin: 0;
         display: flex;
     }
-    span.brand{
-      display: none;
-    }
+
 
     nav.sub_pages ul {
         padding: 0;

@@ -1,5 +1,5 @@
 /* Font Import */
-@import 'https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans|Raleway:300,400,700';
+@import "https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans|Raleway:300,400,700";
 /*
 Animate.css
 https://daneden.github.io/animate.css/
@@ -9,13 +9,11 @@ https://daneden.github.io/animate.css/
     opacity: 0; }
   100% {
     opacity: 1; } }
-
 @keyframes fadeIn {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
-
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn; }
@@ -533,69 +531,89 @@ footer {
   .col-third,
   .col-two-third {
     width: 100%; }
+
   footer {
     height: 100%;
     padding: 0 20px; }
+
   .row {
     padding: 0 20px; }
+
   .footer_left,
   .footer_right {
     width: 100%;
     padding: 0;
     text-align: center; }
+
   .footer_right {
     height: 50px;
     justify-content: center;
     margin-top: 20px; }
+
   .box {
     width: 100%;
     margin-top: 10px; }
+
   .blog-example {
     min-width: 100%; }
+
   nav {
     flex-direction: column; }
-  span.brand, span.brand-sub {
-    margin: 0 0 20px 0; } }
 
-@media (max-width: 560px) {
-  section.hero {
-    min-height: 60vh; }
+  span.brand, span.brand-sub {
+    margin: 0 0 20px 0; }
+
+  span.brand {
+    display: none; }
+
   nav.main,
   nav.sub_pages {
     justify-content: center;
     flex: 1 0 auto;
-    min-height: 150px; }
+    min-height: 150px; } }
+@media (max-width: 560px) {
+  section.hero {
+    min-height: 60vh; }
+
   nav.sub_pages {
     border-bottom: 1px solid gray; }
+
   nav.main ul {
     padding: 0;
     margin: 0;
     display: flex; }
-  span.brand {
-    display: none; }
+
   nav.sub_pages ul {
     padding: 0;
     margin: 0;
     display: flex; }
+
   nav.main li {
     margin: 0;
     padding: 10px 5px; }
+
   nav.sub_pages li {
     margin: 0;
     padding: 10px 5px; }
+
   h1.hero {
     text-align: center; }
+
   .slider {
     height: 300px; }
+
   .colour-swatch-wrapper {
     display: block; }
+
   .colour-swatch {
     width: 100%; } }
-
 @media (max-width: 300px) {
   nav.main li {
     margin: 0;
     padding: 10px 2px; }
+
   nav.sub_pages li {
     margin: 0;
     padding: 10px 2px; } }
+
+/*# sourceMappingURL=styles.css.map */
