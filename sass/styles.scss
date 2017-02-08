@@ -269,6 +269,7 @@ section.hero {
     background-position: center;
     background-attachment:fixed;
     background-size:cover;
+    width: 100%;
     background-repeat: no-repeat;
     color: $lightgrey;
     display: flex;
@@ -700,6 +701,9 @@ footer {
         min-height: 150px;
 
     }
+
+    
+
 
 
 }

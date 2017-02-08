@@ -236,6 +236,7 @@ section.hero {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+  width: 100%;
   background-repeat: no-repeat;
   color: #F5F5F5;
   display: flex;
